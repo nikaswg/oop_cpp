@@ -13,12 +13,12 @@ device::device(const string& s) : version(0), manufacturer("") {
     name = s;
 }
 
-// Деструктор
+
 device::~device() {
     cout << "Destructor called for: " << name << endl;
 }
 
-// Остальные методы
+
 string device::getName() {
     return name;
 }
@@ -53,9 +53,7 @@ void device::scan() {
 }
 
 void device::print() {
-    cout << "Device name: " << name << endl;
-    cout << "Device version: " << version << endl;
-    cout << "Device manufacturer: " << manufacturer << endl;
+    cout << manufacturer << " " << name << " " << version << endl;
 }
 
 int device::count(int kol, string m) {
