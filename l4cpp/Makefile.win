@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o device.o Smartphone.o devices.o
-LINKOBJ  = main.o device.o Smartphone.o devices.o
+OBJ      = main.o device.o Smartphone.o
+LINKOBJ  = main.o device.o Smartphone.o
 LIBS     = -L"D:/Google/Dev-Cpp/MinGW64/lib" -L"D:/Google/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/Google/Dev-Cpp/MinGW64/include" -I"D:/Google/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Google/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/Google/Dev-Cpp/MinGW64/include" -I"D:/Google/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Google/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Google/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -32,6 +32,3 @@ device.o: device.cpp
 
 Smartphone.o: Smartphone.cpp
 	$(CPP) -c Smartphone.cpp -o Smartphone.o $(CXXFLAGS)
-
-devices.o: devices.cpp
-	$(CPP) -c devices.cpp -o devices.o $(CXXFLAGS)
